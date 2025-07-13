@@ -26,8 +26,8 @@ const Header = () => {
                   <Ionicons name='flash-outline' size={28} color="#ffffff"></Ionicons>
               </LinearGradient>
               <View style={homeStyles.titleTextContainer}>
-                  <Text style={homeStyles.title}> Today&apos;s Tasks 👀</Text>
-                  <Text style={homeStyles.subtitle}>{completedCount} of  { totalCount} completed</Text>
+                  <Text style={homeStyles.title}>Today&apos;s Tasks 👀</Text>
+                  <Text style={homeStyles.subtitle}>{completedCount} of { totalCount} completed</Text>
             </View>
           </View>
           
@@ -38,9 +38,10 @@ const Header = () => {
                       
                       <View style={homeStyles.progressBar}>
                           <LinearGradient colors={colors.gradients.success}
-                              style={[homeStyles.progressFill, { width: `${progressPercentage}%` }]} />          
+                          style={[homeStyles.progressFill, { width: `${progressPercentage}%` }]} >
+                          </LinearGradient>
                       </View>
-                      <Text style={homeStyles.progressText}>{Math.round(progressPercentage) }</Text>
+                      <Text style={homeStyles.progressText}>{Math.round(progressPercentage)}%</Text>
                   </View>
             </View>
         {/* )} */}

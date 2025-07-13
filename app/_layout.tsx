@@ -1,6 +1,6 @@
 import { ThemeProvider} from "@/hooks/useTheme";
 import { Stack } from "expo-router";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { ConvexProvider, ConvexReactClient } from "convex/react"
 
 const convex = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
@@ -13,14 +13,12 @@ export default function RootLayout() {
    
   return (
     <SafeAreaProvider>
-      
-        <ConvexProvider client={convex}>
+            <ConvexProvider client={convex}>
           <ThemeProvider>
-            <Stack screenOptions={{ headerShown: false }} />
+            <Stack screenOptions={{ headerShown:false }} />
             {/* <Stack.Screen name="(tabs)"/> */}
           </ThemeProvider>
         </ConvexProvider>
-      
     </SafeAreaProvider>
   );
 }
